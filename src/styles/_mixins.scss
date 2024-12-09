@@ -1,9 +1,7 @@
-@use "variables";
-
 @mixin focus-styles {
-  outline: 3px solid rgba(variables.$primary, 0.6);
+  outline: 3px solid rgba(var(--primary), 0.6);
   outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgba(variables.$primary, 0.2);
+  box-shadow: 0 0 0 3px rgba(var(--primary), 0.2);
 }
 
 @mixin center-flex {

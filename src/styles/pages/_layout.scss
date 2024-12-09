@@ -1,13 +1,12 @@
-@use "../variables";
-
 body {
   width: 100%;
   height: 100vh;
-  background-color: variables.$background;
-  color: variables.$primary;
+  background-color: rgb(var(--background));
+  color: rgb(var(--primary));
 }
 
 .layout {
+  position: relative;
   max-width: 1500px;
   margin: 0 auto;
   height: 100%;

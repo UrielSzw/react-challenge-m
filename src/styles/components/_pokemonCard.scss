@@ -3,7 +3,7 @@
 
 .card {
   width: 100%;
-  background-color: variables.$card-background;
+  background-color: rgb(var(--card-background));
   border-radius: variables.$border-radius;
   display: flex;
   flex-direction: column;
@@ -14,12 +14,12 @@
   gap: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  color: variables.$primary;
+  color: rgb(var(--primary));
 
   &_circle {
     width: 140px;
     height: 140px;
-    background-color: #fff;
+    background-color: rgb(var(--card-circle));
     border-radius: 70px;
     position: relative;
 
@@ -102,6 +102,6 @@
   }
 
   @media (min-width: 660px) {
-    max-width: 190px;
+    width: 190px;
   }
 }

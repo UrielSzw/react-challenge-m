@@ -1,6 +1,24 @@
-$primary: #30345a;
-$background: #f5fbfb;
-$secondary: #e2e7eb;
-$card-background: #efd3bb;
 $border-radius: 20px;
 $active-scale: scale(1.05);
+
+:root {
+  --primary: 48, 52, 90; // #30345a
+  --primary-foreground: 255, 255, 255; // #ffffff
+  --background: 245, 251, 251; // #f5fbfb
+  --secondary: 226, 231, 235; //#e2e7eb;
+  --card-background: 239, 211, 187; // #efd3bb;
+  --card-circle: 255, 255, 255; // #ffffff
+  --scrollbar: 48, 52, 90; // #30345a
+  --scrollbar-border: 241, 241, 241; // #f1f1f1
+}
+
+[data-theme="dark"] {
+  --primary: 245, 251, 251; // #f5fbfb
+  --primary-foreground: 48, 52, 90; // #30345a
+  --background: 64, 61, 57; // #403d39;
+  --secondary: 31, 32, 34; // #1f2022;
+  --card-background: 48, 52, 90; // #30345a
+  --card-circle: 226, 231, 235; //#e2e7eb;
+  --scrollbar: 48, 52, 90; // #30345a
+  --scrollbar-border: 31, 32, 34; // #1f2022;
+}

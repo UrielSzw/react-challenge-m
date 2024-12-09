@@ -17,8 +17,8 @@
   &_item {
     @include center-flex;
     border-radius: variables.$border-radius;
-    background-color: variables.$secondary;
-    color: variables.$primary;
+    background-color: rgb(var(--secondary));
+    color: rgb(var(--primary));
     font-size: 12px;
     text-decoration: none;
     padding-bottom: 1px;
@@ -30,7 +30,7 @@
     }
 
     &:not(&_ellipsis):not(&_active):hover {
-      background-color: rgba(variables.$primary, 0.2);
+      background-color: rgba(var(--primary), 0.2);
 
       &:active {
         transform: variables.$active-scale;
@@ -38,8 +38,8 @@
     }
 
     &_active {
-      color: #fff;
-      background-color: variables.$primary;
+      color: rgb(var(--primary-foreground));
+      background-color: rgb(var(--primary));
       font-weight: 700;
       cursor: default;
     }

@@ -28,6 +28,10 @@
     border-radius: variables.$border-radius;
     background-color: #f0f0f0;
   }
+
+  @media (min-width: 660px) {
+    width: 190px;
+  }
 }
 
 @keyframes shimmer {
