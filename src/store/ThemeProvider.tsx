@@ -16,11 +16,13 @@ export const ThemeProvider: React.FC<Props> = ({ children }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem("theme");
-      if (storedTheme) {
+
+      if (storedTheme && !theme) {
         dispatch(setTheme(storedTheme));
       } else {
         localStorage.setItem("theme", theme);
       }
+
       document.documentElement.setAttribute("data-theme", theme);
     }
   }, [theme, dispatch]);
