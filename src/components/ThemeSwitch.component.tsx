@@ -12,6 +12,9 @@ export const ThemeSwitch = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   const handleToggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+
+    document.documentElement.setAttribute("data-theme", newTheme);
     dispatch(toggleTheme());
   };
 
