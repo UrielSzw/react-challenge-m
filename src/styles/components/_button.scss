@@ -30,6 +30,7 @@
 }
 
 .switchbutton {
+  @include center-flex;
   border: none;
   background-color: rgb(var(--button-bg));
   color: rgb(var(--button-bg-foreground));
