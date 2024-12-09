@@ -4,7 +4,7 @@ import { PokemonListResponse } from "../types/pokemon.types";
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://pokeapi.co/api/v2/",
+    baseUrl: process.env.NEXT_PUBLIC_POKEMON_API_BASE_URL,
   }),
   endpoints: (builder) => ({
     getPokemons: builder.query<

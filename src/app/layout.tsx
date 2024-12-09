@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Pokédex - Explora Pokémon y sus habilidades",
   description:
     "Descubre y aprende sobre tus Pokémon favoritos con la app Pokédex. Explora estadísticas, habilidades y mucho más usando la PokéAPI.",
-  viewport: "width=device-width, initial-scale=1.0",
   icons: {
     icon: "/pokeball.png",
   },
