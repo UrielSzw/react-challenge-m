@@ -23,7 +23,11 @@ export const ThemeSwitch = () => {
       }
       onClick={handleToggleTheme}
     >
-      {theme === "light" ? <MoonIcon /> : <SunIcon />}
+      {theme === "light" ? (
+        <MoonIcon transform="scale(0.8)" />
+      ) : (
+        <SunIcon transform="scale(0.8)" />
+      )}
     </button>
   );
 };
