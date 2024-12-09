@@ -17,6 +17,8 @@ export const ThemeProvider: React.FC<Props> = ({ children }) => {
 
       if (storedTheme) {
         dispatch(setTheme(storedTheme));
+        document.documentElement.setAttribute("data-theme", storedTheme);
+        localStorage.setItem("theme", storedTheme);
       }
     }
   }, [dispatch]);
