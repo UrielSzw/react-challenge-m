@@ -18,7 +18,8 @@ export const PokemonCard: React.FC<Props> = ({ name, numId }) => {
 
   return (
     <Link
-      href={`/pokemons/${numId}`}
+      // href={`/pokemons/${numId}`}
+      href="/pokemons/in-progress"
       className="card"
       aria-label={`Ver detalles de ${name}`}
     >
