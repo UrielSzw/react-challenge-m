@@ -1,7 +1,10 @@
-@import "layout";
-@import "home";
-@import "pokemonPage";
+@import "pages/home";
+@import "pages/layout";
+@import "pages/pokemonPage";
 @import "reset";
 @import "scrollbar";
 @import "components/pokemonCard";
 @import "components/pagination";
+@import "components/button";
+@import "skeletons/cardSkeleton";
+@import "skeletons/listSkeleton";

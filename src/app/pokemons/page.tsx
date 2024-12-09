@@ -6,6 +6,8 @@ import { PokemonCard } from "../../components/PokemonCard.component";
 import { Pagination } from "../../components/Pagination.component";
 import { MAX_ITEMS } from "../../global/const";
 import { useSearchParams } from "next/navigation";
+import { ListSkeleton } from "../../skeletons/ListSkeleton.component";
+import { ErrorMessage } from "../../components/ErrorMessage.component";
 
 export default function PokemonsPage() {
   const searchParams = useSearchParams();
@@ -17,9 +19,9 @@ export default function PokemonsPage() {
     offset: (page - 1) * MAX_ITEMS,
   });
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <ListSkeleton />;
 
-  if (error) return <p>Error loading Pokémon list.</p>;
+  if (error) return <ErrorMessage />;
 
   return (
     <section className="container">

@@ -1,9 +1,10 @@
 @use "../variables";
+@import "../mixins";
 
 .card {
   width: 100%;
-  background-color: #efd3bb;
-  border-radius: 20px;
+  background-color: variables.$card-background;
+  border-radius: variables.$border-radius;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,15 +15,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: variables.$primary;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  &:active {
-    transform: scale(1.02);
-  }
 
   &_circle {
     width: 140px;
@@ -43,11 +35,9 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      top: 0;
+      inset: 0;
       opacity: 0.6;
+      gap: 4px;
 
       span {
         text-align: center;
@@ -57,15 +47,14 @@
   }
 
   &_content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center-flex;
     gap: 8px;
     position: relative;
   }
 
   &_name {
     font-weight: 700;
+    font-size: 18px;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -81,12 +70,34 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
   &:hover &_icon {
     opacity: 1;
     transform: translateX(0);
   }
 
   &:hover &_name {
+    transform: translateX(6px);
+  }
+
+  &:active {
+    transform: variables.$active-scale;
+  }
+
+  &:focus {
+    @include focus-styles;
+  }
+
+  &:focus &_icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:focus &_name {
     transform: translateX(6px);
   }
 }

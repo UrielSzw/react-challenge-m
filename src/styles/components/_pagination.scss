@@ -1,4 +1,5 @@
 @use "../variables";
+@import "../mixins";
 
 .pagination {
   display: flex;
@@ -14,13 +15,11 @@
   }
 
   &_item {
-    border-radius: 20px;
-    font-size: 12px;
+    @include center-flex;
+    border-radius: variables.$border-radius;
     background-color: variables.$secondary;
     color: variables.$primary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 12px;
     text-decoration: none;
     padding-bottom: 1px;
     user-select: none;
@@ -34,14 +33,19 @@
       background-color: rgba(variables.$primary, 0.2);
 
       &:active {
-        transform: scale(1.02);
+        transform: variables.$active-scale;
       }
     }
 
     &_active {
       color: #fff;
       background-color: variables.$primary;
+      font-weight: 700;
       cursor: default;
+    }
+
+    &:not(.pagination_item_active):not(.pagination_disabled):focus {
+      @include focus-styles;
     }
 
     @media (max-width: 700px) {

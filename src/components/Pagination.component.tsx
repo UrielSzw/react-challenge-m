@@ -62,6 +62,7 @@ export const Pagination: React.FC<Props> = ({ count }) => {
           page === 1 ? "pagination_disabled" : ""
         }`}
         href={`/pokemons?page=${page - 1}`}
+        tabIndex={page === 1 ? -1 : 0}
       >
         <ChevronLeftIcon transform="scale(0.6)" />
         Anterior
@@ -86,6 +87,7 @@ export const Pagination: React.FC<Props> = ({ count }) => {
               page === Number(item) ? "pagination_item_active" : ""
             }`}
             href={`/pokemons?page=${item}`}
+            tabIndex={page === Number(item) ? -1 : 0}
           >
             {item}
           </Link>
@@ -96,6 +98,7 @@ export const Pagination: React.FC<Props> = ({ count }) => {
           page === Math.ceil(count / MAX_ITEMS) ? "pagination_disabled" : ""
         }`}
         href={`/pokemons?page=${page + 1}`}
+        tabIndex={page === Math.ceil(count / MAX_ITEMS) ? -1 : 0}
       >
         Siguiente
         <ChevronRightIcon transform="scale(0.6)" />

@@ -1,10 +1,16 @@
 "use client";
 
+import { Button } from "../components/Button.component";
+import { LinkButton } from "../components/LinkButton.component";
+
 export default function Error({ reset }: { reset: () => void }) {
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button onClick={() => reset()}>Try again</button>
+    <div className="bounderies">
+      <h3>500 - Error inesperado</h3>
+      <p>Lo sentimos, algo salió mal.</p>
+      <img src="/sad_pikachu.png" alt="Sad pikachu" className="error_image" />
+      <Button onClick={() => reset()}>Intentar nuevamente</Button>
+      <LinkButton href="/">Volver al inicio</LinkButton>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+@import "../mixins";
+
+.home {
+  flex: 1;
+  @include center-flex;
+  width: 100%;
+}
