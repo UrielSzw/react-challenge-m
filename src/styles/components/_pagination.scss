@@ -39,7 +39,7 @@
 
     &_active {
       color: rgb(var(--primary-foreground));
-      background-color: rgb(var(--primary));
+      background-color: rgb(var(--button-bg));
       font-weight: 700;
       cursor: default;
     }
