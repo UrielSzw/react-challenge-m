@@ -16,7 +16,13 @@ export const ThemeSwitch = () => {
   };
 
   return (
-    <button className="switchbutton" onClick={handleToggleTheme}>
+    <button
+      className="switchbutton"
+      aria-label={
+        theme === "light" ? "Activar modo oscuro" : "Activar modo claro"
+      }
+      onClick={handleToggleTheme}
+    >
       {theme === "light" ? <MoonIcon /> : <SunIcon />}
     </button>
   );

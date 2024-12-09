@@ -17,7 +17,11 @@ export const PokemonCard: React.FC<Props> = ({ name, numId }) => {
   const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${numId}.svg`;
 
   return (
-    <Link href={`/pokemons/${numId}`} className="card">
+    <Link
+      href={`/pokemons/${numId}`}
+      className="card"
+      aria-label={`Ver detalles de ${name}`}
+    >
       <div className="card_circle">
         {isImage ? (
           <Image
