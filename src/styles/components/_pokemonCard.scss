@@ -59,7 +59,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100px;
+    max-width: 140px;
     transform: translateX(16px);
     transition: transform 0.3s ease;
   }
@@ -99,5 +99,9 @@
 
   &:focus &_name {
     transform: translateX(6px);
+  }
+
+  @media (min-width: 660px) {
+    max-width: 190px;
   }
 }
