@@ -29,4 +29,17 @@
       grid-template-columns: repeat(5, 1fr);
     }
   }
+
+  .nodata {
+    margin-top: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    span {
+      width: 70%;
+    }
+  }
 }
